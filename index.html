@@ -37,7 +37,7 @@
           input.value = "";
 
           // Enviar mensagem para a API do chatbot no Render
-          const response = await fetch("https://seu-bot.onrender.com/api/chatbot", {
+          const response = await fetch("https://telegram-nextgen-analytics-website.onrender.com/", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ user_message: message }),
