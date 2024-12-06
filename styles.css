@@ -220,3 +220,52 @@ img, .banner-image {
 form {
   padding: 10px;
 }
+
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    background: #007BFF;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#chat-header {
+    background: #0056b3;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#chat-body {
+    display: none;
+    padding: 10px;
+}
+
+#chat-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#chat-input {
+    width: calc(100% - 50px);
+    padding: 5px;
+}
+
+#chat-send {
+    width: 40px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
