@@ -21,33 +21,50 @@
   </div>
 
   <!-- JavaScript do Chatbot -->
-  <script>
-      function toggleChat() {
-          const chatBody = document.getElementById("chat-body");
-          chatBody.style.display = chatBody.style.display === "none" ? "block" : "none";
-      }
+<script>
+    // Função para abrir e fechar o chatbot
+    function toggleChat() {
+        const chatBody = document.getElementById("chat-body");
+        chatBody.style.display = chatBody.style.display === "none" ? "block" : "none";
+    }
 
-      async function sendMessage() {
-          const input = document.getElementById("chat-input");
-          const message = input.value.trim();
-          if (!message) return;
+    // Função para enviar mensagem
+    async function sendMessage() {
+        const input = document.getElementById("chat-input");
+        const message = input.value.trim();
+        if (!message) return; // Não faz nada se a mensagem estiver vazia
 
-          const chatMessages = document.getElementById("chat-messages");
-          chatMessages.innerHTML += `<div>Você: ${message}</div>`;
-          input.value = "";
+        const chatMessages = document.getElementById("chat-messages");
+        chatMessages.innerHTML += `<div>Você: ${message}</div>`; // Adiciona a mensagem do usuário
+        input.value = ""; // Limpa o campo de entrada
 
-          // Enviar mensagem para a API do chatbot no Render
-          const response = await fetch("https://telegram-nextgen-analytics-website.onrender.com/api/chatbot", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ user_message: message }),
-          });
+        try {
+            // Chama a API do chatbot no Render
+            const response = await fetch("https://telegram-nextgen-analytics-website.onrender.com/api/chatbot", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user_message: message }),
+            });
 
-          const data = await response.json();
-          chatMessages.innerHTML += `<div>Bot: ${data.response || "Desculpe, não entendi."}</div>`;
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-      }
-  </script>
+            const data = await response.json();
+            chatMessages.innerHTML += `<div>Bot: ${data.response || "Desculpe, não entendi."}</div>`; // Adiciona a resposta do bot
+        } catch (error) {
+            chatMessages.innerHTML += `<div>Bot: Ocorreu um erro ao tentar processar sua mensagem.</div>`;
+            console.error("Erro ao enviar mensagem:", error);
+        }
+
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Rola para a última mensagem
+    }
+
+    // Enviar mensagem ao pressionar Enter
+    document.getElementById("chat-input").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") { // Detecta a tecla Enter
+            sendMessage(); // Chama a função de envio
+            event.preventDefault(); // Evita o comportamento padrão (ex.: quebra de linha)
+        }
+    });
+</script>
+
   
 <header>
     <div class="container">
