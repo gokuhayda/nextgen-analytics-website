@@ -1,0 +1,222 @@
+/* Reset */
+body, h1, h2, p, ul, li, form, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: #007BFF;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+main h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Formulário de Contato */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column; /* Alinha os campos verticalmente */
+  gap: 15px; /* Espaçamento entre os elementos */
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Outras Formas de Contato */
+section ul {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+section ul li {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer a {
+  display: block;
+  margin-top: 15px;
+}
+
+.back-to-home {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.back-to-home:hover {
+  text-decoration: underline;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #25D366;
+  padding: 15px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px auto;
+  max-width: 250px;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none; /* Hide menu by default */
+    background-color: #333;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when active */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+  }
+}
+
+/* Default visibility for the hamburger menu button */
+.hamburger {
+  display: none;
+}
+
+/* Responsive images */
+img, .banner-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form fields adjustment for smaller screens */
+form {
+  padding: 10px;
+}

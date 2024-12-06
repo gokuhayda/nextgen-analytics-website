@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - NextGen Analytics Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="images/DALL·E 2024-12-06 11.24.20 - Create a modern and approachable image for a website's 'Contact' page, featuring elements like a message envelope, chat bubbles, and a glowing map pin.webp" alt="Banner Image" class="banner-image" width="400" height="200">
+    <div class="container">
+      <h1>Contato</h1>
+      <p>Estamos aqui para ajudar. Entre em contato conosco!</p>
+    </div>
+  </header>
+
+
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul class="menu">
+    <li><a href="index.html">🏠 Início</a></li>
+    <li><a href="competency_mapping.html">📊 Mapeamento de Competências</a></li>
+    <li><a href="process_optimization.html">⚙️ Otimização de Processos</a></li>
+    <li><a href="data_science_consulting.html">📈 Consultoria em Ciência de Dados</a></li>
+    <li><a href="machine_learning_solutions.html">🤖 Soluções de Machine Learning</a></li>
+    <li><a href="contact.html">📞 Contato</a></li>
+  </ul>
+</nav>
+                <ul>
+      <li><a href="index.html">🏠 Início</a></li>
+      <li><a href="competency_mapping.html">📊 Mapeamento de Competências</a></li>
+      <li><a href="process_optimization.html">⚙️ Otimização de Processos</a></li>
+      <li><a href="data_science_consulting.html">📈 Consultoria em Ciência de Dados</a></li>
+      <li><a href="machine_learning_solutions.html">🤖 Soluções de Machine Learning</a></li>
+      <li><a href="contact.html">📞 Contato</a></li>
+    </ul>
+
+  <main>
+    <section>
+      <h2>Fale Conosco</h2>
+      <p>Envie-nos uma mensagem usando o formulário abaixo ou entre em contato diretamente por WhatsApp ou e-mail.</p>
+
+      <form id="contactForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required placeholder="Seu nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Escreva sua mensagem aqui"></textarea>
+
+        <button type="button" onclick="sendToWhatsApp()">Enviar para WhatsApp</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Outras Formas de Contato</h2>
+      <ul>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5541995484812" target="_blank">+55 41 99548-4812</a></li>
+        <li><strong>E-mail:</strong> <a href="mailto:contato@nextgenanalytics.com">contato@nextgenanalytics.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 NextGen Analytics Solutions. Todos os direitos reservados.</p>
+    <a href="index.html" class="back-to-home">Voltar para a Página Principal</a>
+    <a href="https://wa.me/5541995484812" target="_blank" class="whatsapp-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-icon">
+      Fale conosco pelo WhatsApp
+    </a>
+  </footer>
+
+  <script>
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Por favor, preencha todos os campos antes de enviar.');
+        return;
+      }
+
+      const whatsappMessage = `Olá, meu nome é ${name}. Meu e-mail é ${email}. Gostaria de falar sobre: ${message}`;
+      const whatsappNumber = "5541995484812";
+
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+            </body>
+</html>
+
