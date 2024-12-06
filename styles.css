@@ -224,7 +224,7 @@ form {
 .chatbot {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px; /* Altere de left para right */
     width: 300px;
     background: #007BFF;
     color: white;
@@ -232,6 +232,7 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     font-family: Arial, sans-serif;
+    z-index: 1000;
 }
 
 #chat-header {
