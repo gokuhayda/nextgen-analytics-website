@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFK1J8PF6K"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-BFK1J8PF6K');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Analytics Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFK1J8PF6K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BFK1J8PF6K');
+    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <img src="images/DALL·E 2024-12-06 11.46.00 - Design a modern and sleek logo for a company called 'NextGen Analytics Solutions'. The logo should feature abstract and futuristic elements like conne.webp" alt="NextGen Analytics Solutions Logo" width="100" height="50">
+            <img src="images/DALL·E 2024-12-06 11.46.00 - Design a modern and sleek logo for a company called 'NextGen Analytics Solutions'. The logo should feature abstract and futuristic elements like conne.webp" alt="NextGen Analytics Solutions Logo" class="banner-image" width="100" height="50">
             <h1>NextGen Analytics Solutions</h1>
             <p>Transformando dados em estratégias poderosas</p>
         </div>
@@ -29,18 +26,16 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="menu-container">
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul id="menu" class="menu">
-                <li><a href="index.html">🏠 Início</a></li>
-                <li><a href="competency_mapping.html">📊 Mapeamento de Competências</a></li>
-                <li><a href="process_optimization.html">⚙️ Otimização de Processos</a></li>
-                <li><a href="data_science_consulting.html">📈 Consultoria em Ciência de Dados</a></li>
-                <li><a href="machine_learning_solutions.html">🤖 Soluções de Machine Learning</a></li>
-                <li><a href="generative_models.html">🌌 Modelos Transformativos Generativos</a></li>
-                <li><a href="contact.html">📞 Contato</a></li>
-            </ul>
-        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="menu">
+            <li><a href="index.html">🏠 Início</a></li>
+            <li><a href="competency_mapping.html">📊 Mapeamento de Competências</a></li>
+            <li><a href="process_optimization.html">⚙️ Otimização de Processos</a></li>
+            <li><a href="data_science_consulting.html">📈 Consultoria em Ciência de Dados</a></li>
+            <li><a href="machine_learning_solutions.html">🤖 Soluções de Machine Learning</a></li>
+            <li><a href="generative_models.html">🌌 Modelos Transformativos Generativos</a></li>
+            <li><a href="contact.html">📞 Contato</a></li>
+        </ul>
     </nav>
 
     <!-- Main Content -->
@@ -49,7 +44,8 @@
         <section id="about">
             <h2>Sobre Nós</h2>
             <p>
-                Na <strong>NextGen Analytics Solutions</strong>, combinamos expertise em dados com metodologias de ponta, como <strong>CRISP-DM</strong> e <strong>Scrum</strong>, para oferecer soluções inovadoras e de alto impacto. Nosso foco é simplificar desafios complexos e ajudar nossos clientes a liderarem em seus mercados.
+                Na <strong>NextGen Analytics Solutions</strong>, transformamos dados em estratégias poderosas. 
+                Combinamos metodologias como <strong>CRISP-DM</strong> e <strong>Scrum</strong> para entregar resultados rápidos e de impacto, ajudando empresas a se destacarem em mercados competitivos.
             </p>
         </section>
 
@@ -59,12 +55,12 @@
             <div class="service-grid">
                 <div class="service">
                     <h3>📊 Mapeamento de Competências</h3>
-                    <p>Identifique talentos e alinhe habilidades aos objetivos organizacionais.</p>
+                    <p>Identifique talentos e alinhe habilidades organizacionais.</p>
                     <a href="competency_mapping.html">Saiba Mais</a>
                 </div>
                 <div class="service">
                     <h3>⚙️ Otimização de Processos</h3>
-                    <p>Aumente a eficiência e a produtividade com soluções sob medida.</p>
+                    <p>Maximize a eficiência operacional com nossas soluções.</p>
                     <a href="process_optimization.html">Saiba Mais</a>
                 </div>
                 <div class="service">
@@ -74,12 +70,12 @@
                 </div>
                 <div class="service">
                     <h3>🤖 Soluções de Machine Learning</h3>
-                    <p>Automatize e inove com modelos preditivos personalizados.</p>
+                    <p>Automatize processos e impulsione a inovação.</p>
                     <a href="machine_learning_solutions.html">Saiba Mais</a>
                 </div>
                 <div class="service">
-                    <h3>🌌 Modelos Generativos</h3>
-                    <p>Explore o potencial da inteligência generativa para inovar.</p>
+                    <h3>🌌 Modelos Transformativos Generativos</h3>
+                    <p>Explore o potencial da inteligência generativa em seus projetos.</p>
                     <a href="generative_models.html">Saiba Mais</a>
                 </div>
             </div>
@@ -88,33 +84,30 @@
         <!-- Success Cases Section -->
         <section id="success-cases">
             <h2>Casos de Sucesso</h2>
-            <p>Descubra como ajudamos empresas a transformar seus negócios com soluções orientadas por dados.</p>
-            <a href="cases.html">Veja Nossos Cases</a>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contato</h2>
-            <p>Entre em contato para saber como podemos ajudar sua empresa a crescer com soluções baseadas em dados.</p>
-            <a href="contact.html" class="contact-button">Fale Conosco</a>
+            <div class="success-case">
+                <h3>Projeto Coletivo Inclusão</h3>
+                <p>
+                    Aplicamos nossas metodologias de <a href="competency_mapping.html">Mapeamento de Competências</a> e 
+                    <a href="process_optimization.html">Otimização de Processos</a> para promover inclusão e eficiência organizacional.
+                </p>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 NextGen Analytics Solutions. Todos os direitos reservados.</p>
-        <ul class="social-links">
-            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-        </ul>
+        <a href="https://wa.me/5541995484812" class="whatsapp-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-icon">
+            Fale conosco no WhatsApp
+        </a>
     </footer>
 
     <!-- JavaScript -->
     <script>
         function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
+            const menu = document.querySelector(".menu");
+            menu.classList.toggle("active");
         }
     </script>
 </body>
