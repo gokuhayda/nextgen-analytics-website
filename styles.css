@@ -261,10 +261,11 @@ footer a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
-
+/* Logotipo do Case */
 .case-logo {
     width: 120px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px; /* Adiciona 20px de espaço abaixo do logotipo */
+    display: block; /* Centraliza o logotipo */
 }
 
 .case-container h2 {
