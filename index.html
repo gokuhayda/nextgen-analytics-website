@@ -18,7 +18,7 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <img src="images/DALL·E 2024-12-06 11.46.00 - Design a modern and sleek logo for a company called 'NextGen Analytics Solutions'. The logo should feature abstract and futuristic elements like conne.webp" alt="NextGen Analytics Solutions Logo" class="banner-image" width="100" height="50">
+            <img src="images/logo.webp" alt="NextGen Analytics Solutions Logo" class="banner-image">
             <h1>NextGen Analytics Solutions</h1>
             <p>Transformando dados em estratégias poderosas</p>
         </div>
@@ -32,8 +32,8 @@
             <li><a href="competency_mapping.html">📊 Mapeamento de Competências</a></li>
             <li><a href="process_optimization.html">⚙️ Otimização de Processos</a></li>
             <li><a href="data_science_consulting.html">📈 Consultoria em Ciência de Dados</a></li>
-            <li><a href="machine_learning_solutions.html">🤖 Soluções de Machine Learning</a></li>
-            <li><a href="generative_models.html">🌌 Modelos Transformativos Generativos</a></li>
+            <li><a href="machine_learning_solutions.html">🤖 Machine Learning</a></li>
+            <li><a href="generative_models.html">🌌 Modelos Generativos</a></li>
             <li><a href="contact.html">📞 Contato</a></li>
         </ul>
     </nav>
@@ -44,14 +44,13 @@
         <section id="about">
             <h2>Sobre Nós</h2>
             <p>
-                Na <strong>NextGen Analytics Solutions</strong>, transformamos dados em estratégias poderosas. 
-                Combinamos metodologias como <strong>CRISP-DM</strong> e <strong>Scrum</strong> para entregar resultados rápidos e de impacto, ajudando empresas a se destacarem em mercados competitivos.
+                Na <strong>NextGen Analytics Solutions</strong>, oferecemos soluções de ponta em ciência de dados e inteligência artificial. Nosso objetivo é simplificar desafios complexos com inovação e eficiência.
             </p>
         </section>
 
         <!-- Services Section -->
         <section id="services">
-            <h2>Nossos Serviços</h2>
+            <h2>Serviços</h2>
             <div class="service-grid">
                 <div class="service">
                     <h3>📊 Mapeamento de Competências</h3>
@@ -60,12 +59,12 @@
                 </div>
                 <div class="service">
                     <h3>⚙️ Otimização de Processos</h3>
-                    <p>Maximize a eficiência operacional com nossas soluções.</p>
+                    <p>Maximize a eficiência operacional com soluções sob medida.</p>
                     <a href="process_optimization.html">Saiba Mais</a>
                 </div>
                 <div class="service">
                     <h3>📈 Consultoria em Ciência de Dados</h3>
-                    <p>Transforme dados em decisões estratégicas e insights valiosos.</p>
+                    <p>Transforme dados em insights estratégicos.</p>
                     <a href="data_science_consulting.html">Saiba Mais</a>
                 </div>
                 <div class="service">
@@ -74,37 +73,40 @@
                     <a href="machine_learning_solutions.html">Saiba Mais</a>
                 </div>
                 <div class="service">
-                    <h3>🌌 Modelos Transformativos Generativos</h3>
-                    <p>Explore o potencial da inteligência generativa em seus projetos.</p>
+                    <h3>🌌 Modelos Generativos</h3>
+                    <p>Descubra o poder da inteligência generativa.</p>
                     <a href="generative_models.html">Saiba Mais</a>
                 </div>
             </div>
         </section>
 
-        <!-- Success Cases Section -->
-        <section id="success-cases">
-            <h2>Casos de Sucesso</h2>
-            <div class="success-case">
-                <h3>Projeto Coletivo Inclusão</h3>
-                <p>
-                    Aplicamos nossas metodologias de <a href="competency_mapping.html">Mapeamento de Competências</a> e 
-                    <a href="process_optimization.html">Otimização de Processos</a> para promover inclusão e eficiência organizacional.
-                </p>
-            </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para transformar sua empresa com soluções inovadoras.</p>
+            <a href="https://api.whatsapp.com/send?phone=5541995484812&text=Oi, visitei o site e gostaria de saber mais sobre a NextGen Analytics Solutions" class="whatsapp-button">Fale conosco no WhatsApp</a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 NextGen Analytics Solutions. Todos os direitos reservados.</p>
-        <a href="https://wa.me/5541995484812" class="whatsapp-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-icon">
-            Fale conosco no WhatsApp
-        </a>
+        <ul>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+        </ul>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Chatbot Integration -->
     <script>
+        function initChatbot() {
+            const chatbotScript = document.createElement('script');
+            chatbotScript.src = "https://path-to-your-chatbot.com/chatbot.js";
+            document.body.appendChild(chatbotScript);
+        }
+        initChatbot();
+
         function toggleMenu() {
             const menu = document.querySelector(".menu");
             menu.classList.toggle("active");
