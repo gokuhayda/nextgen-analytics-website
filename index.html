@@ -29,13 +29,16 @@
 
     <!-- Navigation -->
     <nav>
-        <ul>
-            <li><a href="index.html">🏠 Início</a></li>
-            <li><a href="#services">📊 Serviços</a></li>
-            <li><a href="#about">ℹ️ Sobre Nós</a></li>
-            <li><a href="#success-cases">✅ Casos de Sucesso</a></li>
-            <li><a href="#contact">📞 Contato</a></li>
-        </ul>
+        <div class="menu-container">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="menu" class="menu">
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="#services">📊 Serviços</a></li>
+                <li><a href="#about">ℹ️ Sobre Nós</a></li>
+                <li><a href="#success-cases">✅ Casos de Sucesso</a></li>
+                <li><a href="#contact">📞 Contato</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -107,5 +110,14 @@
             <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
         </ul>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Função para alternar o menu responsivo
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
