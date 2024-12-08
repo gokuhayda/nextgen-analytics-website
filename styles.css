@@ -264,7 +264,7 @@ footer a:hover {
 /* Logotipo do Case */
 .case-logo {
     width: 120px;
-    margin: 30px auto; /* Espaço superior e inferior de 30px */
+    margin: 60px auto; /* Espaço superior e inferior de 30px */
     display: block; /* Centraliza o logotipo */
 }
 
