@@ -373,3 +373,38 @@ footer a:hover {
     border-top: 1px solid #ddd;
     margin: 40px 0;
 }
+
+/* Animação no menu responsivo */
+.menu {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.menu.active {
+    max-height: 500px;
+}
+
+/* Destaque de CTAs */
+.whatsapp-button, .email-button {
+    border: 2px solid #007bff;
+    transition: all 0.3s ease-in-out;
+}
+
+.whatsapp-button:hover, .email-button:hover {
+    border-color: #004494;
+    transform: scale(1.05);
+}
+
+/* Formulário com feedback visual */
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Acessibilidade para navegação por teclado */
+a:focus, button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 4px;
+}

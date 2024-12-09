@@ -16,6 +16,9 @@
     </header>
 
     <nav>
+    <div aria-label="breadcrumb">
+        <a href="index.html">Início</a> > <span>Contact</span>
+    </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="menu">
             <li><a href="index.html">🏠 Início</a></li>
@@ -30,6 +33,22 @@
     </nav>
 
     <main>
+    <form action="mailto:contatonextgenanalytics@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="service">Serviço de Interesse:</label>
+        <select id="service" name="service">
+            <option value="data_science">Consultoria em Ciência de Dados</option>
+            <option value="machine_learning">Machine Learning</option>
+            <option value="generative_models">Modelos Generativos</option>
+            <option value="process_optimization">Otimização de Processos</option>
+        </select>
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
         <section>
             <h2>Fale Conosco</h2>
             <p>Você pode nos contatar por meio do WhatsApp ou enviar um e-mail clicando no botão abaixo.</p>
