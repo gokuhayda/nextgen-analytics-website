@@ -14,17 +14,18 @@
         gtag('config', 'G-BFK1J8PF6K');
     </script>
     <style>
-        /* Estilo para o pop-up do bot */
+        /* Estilos do popup */
         #chat-popup {
             display: none;
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 400px;
-            height: 600px;
-            background: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 1000;
         }
 
@@ -34,25 +35,30 @@
             border: none;
         }
 
-        #open-chatbot, #close-chatbot {
+        #chat-popup-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+            background: none;
+            border: none;
+        }
+
+        #chat-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #0078FF;
-            color: #fff;
+            background-color: #0078d7;
+            color: white;
             border: none;
             border-radius: 50%;
             width: 60px;
             height: 60px;
             font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
-        }
-
-        #close-chatbot {
-            display: none;
-            background: #FF0000;
         }
     </style>
 </head>
@@ -68,6 +74,10 @@
 
     <!-- Navigation -->
     <nav>
+        <div aria-label="breadcrumb">
+            <a href="index.html">Início</a> > <span>Index</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="menu">
             <li><a href="index.html">🏠 Início</a></li>
             <li><a href="competency_mapping.html">📊 Mapeamento de Competências</a></li>
@@ -82,20 +92,67 @@
 
     <!-- Main Content -->
     <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>
+                Na <strong>NextGen Analytics Solutions</strong>, oferecemos soluções de ponta em ciência de dados e inteligência artificial. Nosso objetivo é simplificar desafios complexos com inovação e eficiência.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Serviços</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <h3>📊 Mapeamento de Competências</h3>
+                    <p>Identifique talentos e alinhe habilidades organizacionais.</p>
+                    <a href="competency_mapping.html">Saiba Mais</a>
+                </div>
+                <div class="service">
+                    <h3>⚙️ Otimização de Processos</h3>
+                    <p>Maximize a eficiência operacional com soluções sob medida.</p>
+                    <a href="process_optimization.html">Saiba Mais</a>
+                </div>
+                <div class="service">
+                    <h3>📈 Consultoria em Ciência de Dados</h3>
+                    <p>Transforme dados em insights estratégicos.</p>
+                    <a href="data_science_consulting.html">Saiba Mais</a>
+                </div>
+                <div class="service">
+                    <h3>🤖 Soluções de Machine Learning</h3>
+                    <p>Automatize processos e impulsione a inovação.</p>
+                    <a href="machine_learning_solutions.html">Saiba Mais</a>
+                </div>
+                <div class="service">
+                    <h3>🌌 Modelos Generativos</h3>
+                    <p>Descubra o poder da inteligência generativa.</p>
+                    <a href="generative_models.html">Saiba Mais</a>
+                </div>
+                <div class="service">
+                    <h3>🏆 Cases de Sucesso</h3>
+                    <p>Veja como nossas soluções transformaram empresas e impulsionaram resultados.</p>
+                    <a href="cases.html">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contato</h2>
             <p>Entre em contato conosco para transformar sua empresa com soluções inovadoras.</p>
-            <!-- Botão do WhatsApp -->
             <a href="https://api.whatsapp.com/send?phone=5541995484812&text=Oi, visitei o site e gostaria de saber mais sobre a NextGen Analytics Solutions" class="whatsapp-button">Fale conosco no WhatsApp</a>
         </section>
     </main>
 
-    <!-- Chatbot Pop-Up -->
-    <button id="open-chatbot">🤖</button>
-    <button id="close-chatbot">✖</button>
+    <!-- Chat Popup -->
     <div id="chat-popup">
+        <button id="chat-popup-close" onclick="toggleChat()">×</button>
         <iframe src="https://t.me/NextGenAnalyticsBot"></iframe>
     </div>
+
+    <!-- Chat Button -->
+    <button id="chat-button" onclick="toggleChat()">💬</button>
 
     <!-- Footer -->
     <footer>
@@ -107,23 +164,17 @@
         </ul>
     </footer>
 
-    <!-- JavaScript para controle do pop-up -->
+    <!-- Scripts -->
     <script>
-        const chatbotButton = document.getElementById('open-chatbot');
-        const closeChatbotButton = document.getElementById('close-chatbot');
-        const chatbotPopup = document.getElementById('chat-popup');
+        function toggleChat() {
+            const popup = document.getElementById('chat-popup');
+            popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
+        }
 
-        chatbotButton.addEventListener('click', () => {
-            chatbotPopup.style.display = 'block';
-            chatbotButton.style.display = 'none';
-            closeChatbotButton.style.display = 'block';
-        });
-
-        closeChatbotButton.addEventListener('click', () => {
-            chatbotPopup.style.display = 'none';
-            chatbotButton.style.display = 'block';
-            closeChatbotButton.style.display = 'none';
-        });
+        function toggleMenu() {
+            const menu = document.querySelector(".menu");
+            menu.classList.toggle("active");
+        }
     </script>
 </body>
 </html>
