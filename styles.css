@@ -265,12 +265,12 @@ footer a:hover {
 .case-logo {
     width: 120px;
     height: auto; /* Mantém a proporção da imagem */
-    margin: 60px auto;
+    margin: 30px auto;
     display: block; /* Centraliza o logotipo */
 }
 
 .case-logo:hover {
-    transform: scale(2.2); /* Aumenta ligeiramente o tamanho no hover */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho no hover */
 }
 
 .case-container h2 {
