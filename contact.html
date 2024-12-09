@@ -47,8 +47,9 @@
                 name="phone" 
                 placeholder="+55 (DDD) 00000-0000" 
                 value="+55" 
-                required>
-
+                required
+                title="Digite o número no formato internacional, como +55 (DDD) 00000-0000.">
+            
             <label for="service">Serviço de Interesse:</label>
             <select id="service" name="service" required>
                 <option value="">Selecione um serviço</option>
@@ -86,13 +87,14 @@
 
         document.getElementById("phone").addEventListener("input", function () {
             const phone = this.value.replace(/\D/g, ""); // Remove tudo que não for dígito
+            const startsWithPlus = this.value.startsWith("+"); // Verifica se começa com +
             const isRepeated = /^(\d)\1+$/.test(phone); // Verifica se todos os números são iguais
             const minLength = 10; // Mínimo de 10 números para DDD + telefone
 
-            if (phone.length >= minLength && !isRepeated) {
+            if (startsWithPlus && phone.length >= minLength && !isRepeated) {
                 this.setCustomValidity(""); // Limpa erro de validação
             } else {
-                this.setCustomValidity("Insira um número válido com pelo menos 10 dígitos e sem todos os números repetidos.");
+                this.setCustomValidity("Digite um número válido no formato internacional (ex.: +55 DDD 00000-0000) e sem todos os números repetidos.");
             }
         });
 
