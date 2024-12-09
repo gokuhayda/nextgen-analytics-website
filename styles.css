@@ -486,3 +486,41 @@ a:focus, button:focus {
     outline: 2px solid #007bff;
     outline-offset: 4px;
 }
+/* Rodapé */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+footer p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+footer .social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-links li {
+    display: inline;
+}
+
+footer .social-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #0056b3;
+}
