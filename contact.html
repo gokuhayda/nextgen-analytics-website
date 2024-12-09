@@ -9,7 +9,7 @@
     <script>
         // Inicializa o EmailJS com a Public Key
         (function () {
-            emailjs.init("IXM9bV0t5tdk4Bgdq"); // Substitua pela sua Public Key
+            emailjs.init("JT9NyzDAnv6d9OUli"); // Substitua pela sua Public Key
         })();
     </script>
 </head>
@@ -74,12 +74,12 @@
         document.getElementById("contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
-            // Enviar o formulário usando o EmailJS
-            emailjs.sendForm("service_t5k235z", "_ejs-test-mail-service_", this)
+            // Enviar o formulário usando o EmailJS com o Template ID confirmado
+            emailjs.sendForm("service_t5k235z", "template_4nn4a3g", this)
                 .then(function () {
                     alert("Mensagem enviada com sucesso!");
                 }, function (error) {
-                    alert("Erro ao enviar mensagem. Detalhes: " + JSON.stringify(error));
+                    alert("Erro ao enviar mensagem. Tente novamente. Detalhes: " + JSON.stringify(error));
                 });
         });
     </script>
