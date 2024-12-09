@@ -397,6 +397,37 @@ footer a:hover {
 }
 /* Chatbot */
 /* Popup do Chatbot */
+/* Botão do Chatbot */
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chatbot-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+#chatbot-button .material-icons {
+    font-size: 28px;
+    color: white;
+}
+
+/* Chatbot Container */
 #chatbot-container {
     display: none;
     position: fixed;
@@ -412,18 +443,7 @@ footer a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     overflow: hidden;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    cursor: move;
 }
 
 #chatbot-header {
@@ -437,13 +457,10 @@ footer a:hover {
     align-items: center;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #chatbot-header span {
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: bold;
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -455,52 +472,11 @@ footer a:hover {
     cursor: pointer;
 }
 
-#chatbot-body {
-    height: calc(100% - 40px);
-    overflow: hidden;
-}
-
 #chatbot-frame {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40px);
     border: none;
-    border-radius: 0 0 15px 15px;
 }
-
-/* Botão do Chatbot */
-#chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    animation: bounce 1s infinite alternate;
-}
-
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-5px);
-    }
-}
-
-#chatbot-button:hover {
-    background-color: #0056b3;
-    animation: none;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-
 
 /* Formulário com feedback visual */
 input:focus, textarea:focus {
