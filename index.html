@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Analytics Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFK1J8PF6K"></script>
     <script>
@@ -91,17 +93,18 @@
 
     <!-- Chatbot Container -->
     <div id="chatbot-container">
-    <div id="chatbot-header">
-        <span>Llama Chatbot</span>
-        <button onclick="toggleChatbot()">×</button>
-    </div>
-    <div id="chatbot-body">
+        <div id="chatbot-header">
+            <span>Atendente Virtual</span>
+            <button onclick="toggleChatbot()">×</button>
+        </div>
         <iframe id="chatbot-frame" src="https://sua-api-no-render.com" title="Chatbot"></iframe>
     </div>
-</div>
 
-<button id="chatbot-button" onclick="toggleChatbot()">💬</button>
-    
+    <!-- Botão do Chatbot -->
+    <button id="chatbot-button" onclick="toggleChatbot()">
+        <span class="material-icons">chat</span>
+    </button>
+
     <!-- Footer -->
     <footer>
         <p>© 2024 NextGen Analytics Solutions. Todos os direitos reservados.</p>
