@@ -395,7 +395,100 @@ footer a:hover {
     border-color: #004494;
     transform: scale(1.05);
 }
+/* Chatbot */
+#chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 90%;
+    max-width: 400px;
+    height: 70%;
+    max-height: 500px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+}
 
+#chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chatbot-header span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#chatbot-frame {
+    width: 100%;
+    height: calc(100% - 40px);
+    border: none;
+}
+
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#chatbot-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #chatbot-container {
+        width: 100%;
+        height: 60%;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+
+    #chatbot-header {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #chatbot-frame {
+        height: calc(100% - 32px);
+    }
+
+    #chatbot-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
 /* Formulário com feedback visual */
 input:focus, textarea:focus {
     border-color: #007bff;
