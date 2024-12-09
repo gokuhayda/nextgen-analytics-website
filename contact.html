@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="container">
-            <img src="images/DALL·E 2024-12-06 11.24.20 - Create a modern and approachable image for a website's 'Contact' page, featuring elements like a message envelope, chat bubbles, and a glowing map pin.webp" alt="NextGen Analytics Solutions Logo" class="banner-image">
+            <img src="images/banner.webp" alt="NextGen Analytics Solutions Logo" class="banner-image">
             <h1>Contato</h1>
             <p>Entre em contato conosco para saber mais!</p>
         </div>
@@ -40,8 +40,9 @@
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
 
-            <label for="phone">Telefone (Opcional):</label>
-            <input type="tel" id="phone" name="phone" placeholder="(DDD) 00000-0000" pattern="^\d{2} \d{4,5}-\d{4}$">
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+55 (00) 00000-0000" pattern="^\+\d{1,3} \d{2} \d{4,5}-\d{4}$" value="+55" 
+                title="Formato: +55 (00) 00000-0000. Altere o código do país, se necessário." required>
 
             <label for="service">Serviço de Interesse:</label>
             <select id="service" name="service" required>
