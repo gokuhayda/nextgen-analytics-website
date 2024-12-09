@@ -180,6 +180,7 @@ form button:hover {
 }
 
 /* Botão do WhatsApp */
+/* Botão do WhatsApp */
 #whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -196,7 +197,7 @@ form button:hover {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    z-index: 1000; /* Garante que o botão fique visível acima de outros elementos */
+    z-index: 1000; /* Mantém o botão acima de outros elementos */
 }
 
 #whatsapp-button:hover {
@@ -207,7 +208,9 @@ form button:hover {
 #whatsapp-button .material-icons {
     font-size: 28px;
     color: white;
+    line-height: 1;
 }
+
 /* Responsividade Geral */
 @media (max-width: 768px) {
     header h1 {
