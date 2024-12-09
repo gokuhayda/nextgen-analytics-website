@@ -321,3 +321,55 @@ footer a:hover {
 .case-cta:hover {
     background-color: #0056b3;
 }
+.case-container {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.case-logo {
+    width: 120px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.case-container h2 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.case-container p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.case-details h3 {
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.case-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.case-details ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
