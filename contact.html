@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        // Inicializar o EmailJS com a Public Key
+        // Inicializa o EmailJS com a Public Key
         (function () {
             emailjs.init("JT9NyzDAnv6d9OUli"); // Substitua pela sua Public Key
         })();
@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="container">
-            <img src="images/DALL·E 2024-12-06 11.24.20 - Create a modern and approachable image for a website's 'Contact' page, featuring elements like a message envelope, chat bubbles, and a glowing map pin.webp" alt="NextGen Analytics Solutions Logo" class="banner-image">
+            <img src="images/logo.webp" alt="NextGen Analytics Solutions Logo" class="banner-image">
             <h1>Contato</h1>
             <p>Entre em contato conosco para saber mais!</p>
         </div>
@@ -24,7 +24,7 @@
 
     <nav>
         <div aria-label="breadcrumb">
-            <a href="index.html">Início</a> > <span>Contact</span>
+            <a href="index.html">Início</a> > <span>Contato</span>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="menu">
@@ -75,11 +75,11 @@
             event.preventDefault();
 
             // Enviar o formulário usando o EmailJS
-            emailjs.sendForm("service_t5k235z", "__ejs-test-mail-service__", this)
+            emailjs.sendForm("service_t5k235z", "_ejs-test-mail-service_", this)
                 .then(function () {
                     alert("Mensagem enviada com sucesso!");
                 }, function (error) {
-                    alert("Erro ao enviar mensagem. Tente novamente. Detalhes: " + JSON.stringify(error));
+                    alert("Erro ao enviar mensagem. Detalhes: " + JSON.stringify(error));
                 });
         });
     </script>
