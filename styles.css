@@ -269,9 +269,9 @@ footer a:hover {
     display: block; /* Centraliza o logotipo */
 }
 
-#.case-logo:hover {
-#    transform: scale(1.1); /* Aumenta ligeiramente o tamanho no hover */
-#}
+.case-logo:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho no hover */
+}
 
 .case-container h2 {
     color: #0056b3;
