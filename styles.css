@@ -396,6 +396,7 @@ footer a:hover {
     transform: scale(1.05);
 }
 /* Chatbot */
+/* Popup do Chatbot */
 #chatbot-container {
     display: none;
     position: fixed;
@@ -407,10 +408,22 @@ footer a:hover {
     max-height: 500px;
     background-color: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #chatbot-header {
@@ -422,12 +435,15 @@ footer a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #chatbot-header span {
-    flex-grow: 1;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -439,12 +455,19 @@ footer a:hover {
     cursor: pointer;
 }
 
-#chatbot-frame {
-    width: 100%;
+#chatbot-body {
     height: calc(100% - 40px);
-    border: none;
+    overflow: hidden;
 }
 
+#chatbot-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Botão do Chatbot */
 #chatbot-button {
     position: fixed;
     bottom: 20px;
@@ -456,12 +479,23 @@ footer a:hover {
     width: 60px;
     height: 60px;
     font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
 }
 
 #chatbot-button:hover {
     background-color: #0056b3;
+    animation: none;
 }
 
 /* Responsividade */
@@ -489,6 +523,7 @@ footer a:hover {
         font-size: 20px;
     }
 }
+
 /* Formulário com feedback visual */
 input:focus, textarea:focus {
     border-color: #007bff;
