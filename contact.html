@@ -75,7 +75,7 @@
             event.preventDefault();
 
             // Enviar o formulário usando o EmailJS
-            emailjs.sendForm("service_t5k235z", "ejs-test-mail-service", this)
+            emailjs.sendForm("service_t5k235z", "__ejs-test-mail-service__", this)
                 .then(function () {
                     alert("Mensagem enviada com sucesso!");
                 }, function (error) {
