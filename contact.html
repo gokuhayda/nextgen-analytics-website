@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
+        // Inicializar o EmailJS com a Public Key
         (function () {
-            emailjs.init("JT9NyzDAnv6d9OUli"); // Substitua pelo seu USER_ID do EmailJS
+            emailjs.init("JT9NyzDAnv6d9OUli"); // Substitua pela sua Public Key
         })();
     </script>
 </head>
@@ -64,15 +65,17 @@
     </footer>
 
     <script>
+        // Função para alternar o menu responsivo
         function toggleMenu() {
             document.querySelector(".menu").classList.toggle("active");
         }
 
-        // Script para enviar e-mail via EmailJS
+        // Script para enviar o formulário via EmailJS
         document.getElementById("contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
-            emailjs.sendForm("service_t5k235z", "SEU_TEMPLATE_ID", this)
+            // Enviar o formulário usando o EmailJS
+            emailjs.sendForm("service_t5k235z", "ejs-test-mail-service", this)
                 .then(function () {
                     alert("Mensagem enviada com sucesso!");
                 }, function (error) {
